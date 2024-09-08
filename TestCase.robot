@@ -6,3 +6,7 @@ TC01 - Test hello
 TC02 - Please fail
     Log To Console     Hello World But Fail
     Fail    I want to fail.
+TC03 - Test Sleep
+    Log To Console     Hello Visitor
+    Sleep    10s    Wait for pending
+    Log To Console    Bye
