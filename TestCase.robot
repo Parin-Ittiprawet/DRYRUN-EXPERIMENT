@@ -9,4 +9,4 @@ TC02 - Please fail
 TC03 - Test Sleep
     Log To Console     Hello Visitor
     Sleep    10s    Wait for pending
-    Log To Console    Bye
+    Log To Console    Bye and bye
