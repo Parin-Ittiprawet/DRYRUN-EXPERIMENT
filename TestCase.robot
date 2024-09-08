@@ -7,6 +7,6 @@ TC02 - Please fail
     Log To Console     Hello World But Fail Now I passed
     Pass Execution    I want to fail.
 TC03 - Test Sleep
-    Log To Console     Hello Visitor
+    Log To Console     Hellaao Visitor
     Sleep    10s    Wait for pending
     Log To Console    Bye and bye
