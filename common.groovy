@@ -1,5 +1,5 @@
 def updateGithubStatus(state) {
-    withCredentials([usernamePassword(credentialsId: 'noey-github-kub', usernameVariable: 'USER', passwordVariable: 'PASSWORD')]) {
+    withCredentials([usernamePassword(credentialsId: 'For PTT_PDSR Dryrun', usernameVariable: 'USER', passwordVariable: 'PASSWORD')]) {
         sh """
             curl --location 'https://api.github.com/repos/${USER}/DRYRUN-EXPERIMENT/statuses/${GIT_COMMIT}' \
                 --header 'Content-Type: application/json' \
