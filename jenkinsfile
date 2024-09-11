@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        PARIN_VAR = "Hello world"
-    }
     stages {
         stage('Running Test') {
             steps {
@@ -10,7 +7,6 @@ pipeline {
                     common = load 'common.groovy'
                     common.updateGithubStatus('pending')
                     echo 'test'
-                    echo ${env.JeeVar}
                 }
                 sh 'robot --dryrun -d result TestCase.robot'
             }
