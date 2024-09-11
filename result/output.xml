@@ -1,38 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.5 on darwin)" generated="2024-09-06T15:13:16.122312" rpa="false" schemaversion="5">
-<suite id="s1" name="TestCase" source="/Users/parin.i/Documents/GitHub/Robot-Playground/TestCase.robot">
+<robot generator="Robot 7.0.1 (Python 3.12.5 on darwin)" generated="2024-09-11T16:05:35.720737" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="/Users/parin.i/Documents/GitHub/DRYRUN-EXPERIMENT/TestCase.robot">
 <test id="s1-t1" name="TC01 - Test hello" line="4">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Hello World ${var}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-06T15:13:16.132992" elapsed="0.000102"/>
+<status status="NOT RUN" start="2024-09-11T16:05:35.735587" elapsed="0.000043"/>
 </kw>
-<status status="PASS" start="2024-09-06T15:13:16.132676" elapsed="0.000491"/>
+<status status="PASS" start="2024-09-11T16:05:35.735375" elapsed="0.000328"/>
 </test>
 <test id="s1-t2" name="TC02 - Please fail" line="6">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Hello World But Fail</arg>
+<arg>Hello World But Fail Now I passed</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-06T15:13:16.133353" elapsed="0.000055"/>
+<status status="NOT RUN" start="2024-09-11T16:05:35.735871" elapsed="0.000027"/>
 </kw>
-<kw name="Fail" owner="BuiltIn">
-<msg time="2024-09-06T15:13:16.133540" level="FAIL">I want to fail.</msg>
+<kw name="Pass Execution" owner="BuiltIn">
 <arg>I want to fail.</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="FAIL" start="2024-09-06T15:13:16.133456" elapsed="0.000149">I want to fail.</status>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="NOT RUN" start="2024-09-11T16:05:35.735944" elapsed="0.000018"/>
 </kw>
-<status status="FAIL" start="2024-09-06T15:13:16.133247" elapsed="0.000433">I want to fail.</status>
+<status status="PASS" start="2024-09-11T16:05:35.735775" elapsed="0.000229"/>
 </test>
-<status status="FAIL" start="2024-09-06T15:13:16.123113" elapsed="0.010708"/>
+<test id="s1-t3" name="TC03 - Test Sleep" line="9">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Hellaao Visitor</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-09-11T16:05:35.736143" elapsed="0.000021"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<arg>Wait for pending</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-11T16:05:35.736201" elapsed="0.000036"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Bye and byes</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-09-11T16:05:35.736276" elapsed="0.000017"/>
+</kw>
+<status status="PASS" start="2024-09-11T16:05:35.736062" elapsed="0.000267"/>
+</test>
+<status status="PASS" start="2024-09-11T16:05:35.721309" elapsed="0.015145"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
 </suite>
 </statistics>
 <errors>

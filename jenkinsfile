@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {
+        PARIN_VAR = 'Hello world'
+    }
     stages {
         stage('Running Test') {
             steps {
@@ -8,8 +10,10 @@ pipeline {
                     common = load 'common.groovy'
                     common.updateGithubStatus('pending')
                     echo 'test'
+                    echo "${env.PARIN_VAR}"
+                    echo 'printed'
                 }
-                sh 'robot -d result TestCase.robot'
+                sh 'robot --dryrun -d result TestCase.robot'
             }
         }
     }
@@ -29,10 +33,10 @@ pipeline {
             )
 
             script {
-                if ("${currentBuild.currentResult}" == 'SUCCESS') {
-                            common.updateGithubStatus('success')
-                        }else {
-                            common.updateGithubStatus('failure')
+                if (currentBuild.currentResult.toString() == 'SUCCESS') {
+                    common.updateGithubStatus('success')
+                } else {
+                    common.updateGithubStatus('failure')
                 }
             }
         }
